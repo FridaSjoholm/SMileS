@@ -68,3 +68,4 @@ class TextsController < ApplicationController
     def text_params
       params.require(:message).permit(:message, :time)
     end
+end
