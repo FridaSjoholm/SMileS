@@ -1,0 +1,14 @@
+<p><%= "Created on #{text.created_at.strftime("%m/%e/%Y at %w:%M %p")}, Last modified on #{text.updated_at.strftime("%m/%e/%Y at %w:%M %p")}" %></p>
+<p>
+  <strong>message:</strong>
+  <%= text.message %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= text.time %>
+</p>
+<%= link_to 'Show', text%>
+
+<%= link_to 'Edit', edit_text_path(text)%>
+<%= link_to 'Destroy', text, method: :delete, data: { confirm: 'Are you sure?' } %>

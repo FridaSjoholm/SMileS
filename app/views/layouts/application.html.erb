@@ -9,6 +9,11 @@
   </head>
 
   <body>
+    <ul class="nav nav-tabs" role="tablist">
+      <li><%= link_to 'View list', texts_path %></li>
+      <li><%= link_to 'New text', new_text_path %></li>
+    </ul>
+    <h1>SMileS</h1>
     <%= yield %>
   </body>
 </html>
