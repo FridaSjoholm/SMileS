@@ -1,5 +1,7 @@
 class TextsController < ApplicationController
 
+  before_action :set_text, only: [:show, :edit, :update, :destroy]
+
   def index
     @texts = Text.all
     @text = Text.new
@@ -11,10 +13,6 @@ class TextsController < ApplicationController
 
   def new
     @text = Text.new
-    respond_to do |format|
-      format.html {redirect_to new_text_path}
-      format.js {}
-    end
   end
 
   def edit

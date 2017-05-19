@@ -1,0 +1,20 @@
+<%= form_for(@text, remote: true) do |f| %>
+  <% if @text.errors.any? %>
+      <h2><%= pluralize(@text.errors.count, "error") %> prohibited this text from being saved:</h2>
+      <ul>
+      <% @text.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+  <% end %>
+
+
+  <%= f.label :message %>
+  <%= f.text_field :message %>
+
+  <%= f.label :time %>
+  <%= f.text_area :time %>
+
+  <%= f.submit %>
+
+<% end %>
